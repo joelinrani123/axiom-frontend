@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: #F4F2EC;
+    --surface: #FFFFFF;
+    --ink: #050505;
+    --ink-soft: #525252;
+    --signal: #FF3300;
+    --cobalt: #002FA7;
+    --line: #050505;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background: var(--signal);
+    color: #fff;
+}
+
+@layer base {
+    :root {
+        --background: 40 20% 94%;
+        --foreground: 0 0% 2%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 2%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 2%;
+        --primary: 0 0% 2%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 40 20% 90%;
+        --secondary-foreground: 0 0% 2%;
+        --muted: 40 12% 88%;
+        --muted-foreground: 0 0% 35%;
+        --accent: 13 100% 50%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 2%;
+        --input: 0 0% 2%;
+        --ring: 13 100% 50%;
+        --radius: 0px;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
